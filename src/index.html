@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,8 @@
     <style>
         
         @font-face {
-            font-family: BelyDisplay;
-            src: url('./font/BelyDisplay.ttf');
+            font-family: OpenSans;
+            src: url('./font/OpenSans.ttf');
         }
 
         @font-face {
@@ -20,7 +20,7 @@
 
         .glass {
             background: rgba( 255, 255, 255, 0.3 );
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.1 );
             backdrop-filter: blur( 8px );
             -webkit-backdrop-filter: blur( 8px );
             border-radius: 10px;
@@ -28,54 +28,125 @@
         }
 
         h1, h2, h3 {
-            font-family: BelyDisplay;
+            font-family: OpenSans;
+            font-weight: 800;
         }
 
         p {
             font-family: Lexend;
         }
+
+        .sub-glass {
+            background: rgba( 255, 255, 255, 0.35 );
+            box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.1 );
+            backdrop-filter: blur( 0.5px );
+            -webkit-backdrop-filter: blur( 0.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
     </style>
 </head>
-<body>
-    <section id="perkenalan" class="overscroll-none flex justify-between items-center flex-col p-10 min-h-screen bg-gradient-to-r from-[#190a05] to-[#870000]">
-        <div class="min-w-full glass p-8 text-white">
-            <h1 class="text-[2em]">Halo, I'am Muhammad Supri</h1>
-            <p class="text-xl font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia nulla voluptatem, ad minima voluptates deserunt consequatur quod aspernatur? Totam eaque quidem odio deleniti nesciunt officiis beatae voluptatem dolor illo incidunt? Dolorem quam voluptates et officiis, dignissimos alias molestiae, fuga eligendi dolorum sint cupiditate. Sequi nostrum rem itaque vel iure.</p>
+<body class="min-h-screen overflow-hidden" >
+    <img class="absolute hidden md:block  lg:top-[2em]" src="./img/fp.png" alt="fb">
+    <section id="perkenalan" class=" flex justify-between items-center flex-col p-8 min-h-screen bg-gradient-to-r from-blue-500 to-blue-400">
+        <img src="./img/fp.png" class="absolute md:hidden" alt="">
+        <div class="glass lg:p-16  p-8 text-white">
+            <h1 class="text-[1.3em] pb-2 md:text-[2em]"><span class="text-[1.5em] md:text-[2em]" >👋</span>Halo, Saya Supri</h1>
+            <p class="text-sm md:text-xl font-[300]">Saya sekarang seorang mahasiswa semester 5 di Unisversitas Handayani Makassar. Semester lima ini, saya terpilih untuk belajar di Ruang Guru Camp pada program Kampus Merdeka. Saya belajar banyak tentang FrontEnd Developer, dan website ini merupakan project final salah satu materi di Camp. </p>
         </div>
-        <a class="glass w-10 h-10 flex justify-center items-center" href="#pendidikan"> <span class="text-white" >&darr;</span> </a>
+        <a class="animate-bounce  glass w-10 h-10 flex justify-center items-center" href="#pendidikan"><span class="text-white" >&darr;</span> </a>
     </section>
-    <section id="pendidikan" class="flex justify-between items-center flex-col p-8  min-h-screen bg-gradient-to-r from-[#03001e] via-[#7303c0] to-[#ec38bc]">
-        <a class="glass w-10 h-10 flex justify-center items-center" href="#perkenalan"> <span class="text-white" >&uarr;</span> </a>
-        <div class="glass w-full p-8">
-            <h1 class="text-white text-[2em] text-center pb-5">Pendidikan</h1>
-            <div class="grid grid-cols-3 gap-7">
-                <section class=" rounded-lg p-8 bg-gradient-to-r from-orange-500 to-orange-200 text-white">
-                    <h2>SD INPRES 5/81 Pationgi</h2>
-                    <p>(2006-2012)</p>
+    <img class="absolute hidden top-[50em]  lg:hidden md:block max-w-[600px] lg:bottom-[2em]" src="./img/BG2.png" alt="fb">
+    <section id="pendidikan" class="flex justify-between items-center flex-col p-8  min-h-screen bg-gradient-to-r from-[#7303c0] to-[#9900ff]">
+        <img src="./img/BG2.png" class="absolute top- md:hidden" alt="">
+        <a class="animate-bounce glass w-10 h-10 flex justify-center items-center" href="#perkenalan"> <span class="text-white" >&uarr;</span> </a>
+        <div class="glass max-h-[400px] min-w-[80%] md:min-w-full overflow-scroll md:overscroll-none p-4 md:p-8">
+            <h1 class="text-white text-[1.3em] pb-2 md:text-[2em] text-center">Pendidikan</h1>
+            <div class="flex flex-col md:flex-row gap-4 md:gap-7">
+                <section class="md:flex-1 hover:scale-105 transition-all duration-400 rounded-lg p-4  md:p-8 bg-[#be5dff] text-white">
+                    <h2 class="text-[.9em] md:text-[1.2em] " >SD INPRES 5/81 Pationgi</h2>
+                    <p class="text-sm md:text-xl font-[300]">(2006-2012)</p>
                 </section>
-                <section class=" rounded-lg p-8 bg-gradient-to-r from-purple-800 to-purple-400 text-white " >
-                    <h2>SMP Satap 2 Patimpeng</h2>
-                    <p>(2002-2015)</p>
+                <section class="md:flex-1  hover:scale-105 transition-all duration-400 rounded-lg p-4  md:p-8 bg-[#be5dff] text-white " >
+                    <h2 class="text-[.9em] md:text-[1.2em]" >SMP Satap 2 Patimpeng</h2>
+                    <p class="text-sm md:text-xl font-[300]">(2002-2015)</p>
                 </section>
-                <section class=" rounded-lg p-8 bg-gradient-to-r from-blue-600 to-blue-300 text-white">
-                    <h2>SMA 19 Bone</h2>
-                    <p>(20015-2018)</p>
+                <section class="md:flex-1 hover:scale-105 transition-all duration-400 rounded-lg p-4  md:p-8 bg-[#be5dff] text-white">
+                    <h2 class="text-[.9em] md:text-[1.2em]">SMA 19 Bone</h2>
+                    <p class="text-sm md:text-xl font-[300]">(20015-2018)</p>
                 </section>
             </div>
         </div>
-        <a class="glass w-10 h-10 flex justify-center items-center" href="#portfolio"> <span class="text-white" >&darr;</span> </a>
+        <a class="animate-bounce glass w-10 h-10 flex justify-center items-center" href="#portfolio"> <span class="text-white" >&darr;</span> </a>
     </section>
-    <section id="portfolio" class="min-h-screen bg-gradient-to-r from-[#780206] to-[#061161] ">
-        <a class="glass w-10 h-10 flex justify-center items-center" href="#pendidikan"> <span class="text-white" >&uarr;</span> </a>
-        <div class="glass w-full p-8">
-            <h1>Portofolio</h1>
-            <div>
-                <section>
-                    <h2>Hello</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+    <section id="portfolio" class="flex gap-4 justify-between items-center flex-col p-8  min-h-screen bg-gradient-to-r from-[#00cccc] to-[#6dffff] ">
+        <img src="./img/fp.png" class="absolute md:hidden" alt="">
+        <a class="animate-bounce     glass w-10 h-10 flex justify-center items-center" href="#pendidikan"> <span class="text-white" >&uarr;</span> </a>
+        <div class="glass max-h-[400px] max-w-[80%] md:max-w-full overflow-scroll p-8">
+            <h1 class="text-[1.3em] pb-4 md:text-[2em] md:pb-8 text-white text-center" >Portofolio</h1>
+            <div class="flex flex-wrap justify-center gap-8">
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/1.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/2.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">App</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/3.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/4.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">App</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/5.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/6.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/7.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">App</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/8.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/9.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/10.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/11.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+                <section class="md:max-w-[40%] lg:max-w-[30%] sub-glass overflow-hidden hover:scale-105 transition-all duration-400 text-white" >
+                    <img src="./img/12.jpg" alt="1">
+                    <h2 class="px-4 py-2 text-[1em]  md:text-[2em]">Website</h2>
+                    <p class="px-4 pb-2 font-[300] md:text-xl text-sm text-white ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
                 </section>
             </div>
         </div>
     </section>
-</body>
+    </body>
 </html>
