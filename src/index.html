@@ -6,8 +6,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Muhammad Supri | Portfolio</title>
+    <style>
+        
+        @font-face {
+            font-family: BelyDisplay;
+            src: url('./font/BelyDisplay.ttf');
+        }
+
+        @font-face {
+            font-family: Lexend;
+            src: url('./font/Lexend.ttf');
+        }
+
+        .glass {
+            background: rgba( 255, 255, 255, 0.3 );
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 8px );
+            -webkit-backdrop-filter: blur( 8px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+
+        h1, h2, h3 {
+            font-family: BelyDisplay;
+        }
+
+        p {
+            font-family: Lexend;
+        }
+    </style>
 </head>
 <body>
-    <h1 class="text-blue-500" >Hello World</h1>
+    <section id="perkenalan" class="overscroll-none flex justify-between items-center flex-col p-10 min-h-screen bg-gradient-to-r from-[#190a05] to-[#870000]">
+        <div class="min-w-full glass p-8 text-white">
+            <h1 class="text-[2em]">Halo, I'am Muhammad Supri</h1>
+            <p class="text-xl font-[300]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quia nulla voluptatem, ad minima voluptates deserunt consequatur quod aspernatur? Totam eaque quidem odio deleniti nesciunt officiis beatae voluptatem dolor illo incidunt? Dolorem quam voluptates et officiis, dignissimos alias molestiae, fuga eligendi dolorum sint cupiditate. Sequi nostrum rem itaque vel iure.</p>
+        </div>
+        <a class="glass w-10 h-10 flex justify-center items-center" href="#pendidikan"> <span class="text-white" >&darr;</span> </a>
+    </section>
+    <section id="pendidikan" class="flex justify-between items-center flex-col p-8  min-h-screen bg-gradient-to-r from-[#03001e] via-[#7303c0] to-[#ec38bc]">
+        <a class="glass w-10 h-10 flex justify-center items-center" href="#perkenalan"> <span class="text-white" >&uarr;</span> </a>
+        <div class="glass w-full p-8">
+            <h1 class="text-white text-[2em] text-center pb-5">Pendidikan</h1>
+            <div class="grid grid-cols-3 gap-7">
+                <section class=" rounded-lg p-8 bg-gradient-to-r from-orange-500 to-orange-200 text-white">
+                    <h2>SD INPRES 5/81 Pationgi</h2>
+                    <p>(2006-2012)</p>
+                </section>
+                <section class=" rounded-lg p-8 bg-gradient-to-r from-purple-800 to-purple-400 text-white " >
+                    <h2>SMP Satap 2 Patimpeng</h2>
+                    <p>(2002-2015)</p>
+                </section>
+                <section class=" rounded-lg p-8 bg-gradient-to-r from-blue-600 to-blue-300 text-white">
+                    <h2>SMA 19 Bone</h2>
+                    <p>(20015-2018)</p>
+                </section>
+            </div>
+        </div>
+        <a class="glass w-10 h-10 flex justify-center items-center" href="#portfolio"> <span class="text-white" >&darr;</span> </a>
+    </section>
+    <section id="portfolio" class="min-h-screen bg-gradient-to-r from-[#780206] to-[#061161] ">
+        <a class="glass w-10 h-10 flex justify-center items-center" href="#pendidikan"> <span class="text-white" >&uarr;</span> </a>
+        <div class="glass w-full p-8">
+            <h1>Portofolio</h1>
+            <div>
+                <section>
+                    <h2>Hello</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel qui adipisci id suscipit ad similique quaerat ratione. At, porro id?</p>
+                </section>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
