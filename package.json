@@ -1,0 +1,24 @@
+{
+  "name": "muhammad_supri-final_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i ./input.css -o ./src/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhsupriazis/muhammad_supri-final_project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muhsupriazis/muhammad_supri-final_project/issues"
+  },
+  "homepage": "https://github.com/muhsupriazis/muhammad_supri-final_project#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.8"
+  }
+}
